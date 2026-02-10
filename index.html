@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Week 2026 @ SHSU</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#schedule-root">Skip to schedule</a>
+
+    <header class="hero" aria-labelledby="page-title">
+      <div class="hero__content">
+        <div class="hero__title-wrap">
+          <h1 id="page-title">AI Week 2026 @ SHSU</h1>
+          <span class="ai-pulse" aria-hidden="true"></span>
+        </div>
+        <p>
+          A week of workshops, panels, and practical AI sessions for SHSU faculty,
+          staff, and students.
+        </p>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="controls" aria-label="Schedule controls">
+        <div class="control-row">
+          <div class="day-rail" id="day-rail" role="tablist" aria-label="Filter events by day">
+            <button class="chip is-active" type="button" data-day="all" role="tab" aria-selected="true">All days</button>
+            <button class="chip" type="button" data-day="monday" role="tab" aria-selected="false">Mon</button>
+            <button class="chip" type="button" data-day="tuesday" role="tab" aria-selected="false">Tue</button>
+            <button class="chip" type="button" data-day="wednesday" role="tab" aria-selected="false">Wed</button>
+            <button class="chip" type="button" data-day="thursday" role="tab" aria-selected="false">Thu</button>
+            <button class="chip" type="button" data-day="friday" role="tab" aria-selected="false">Fri</button>
+            <button class="chip" type="button" data-day="on-demand" role="tab" aria-selected="false">On-demand/TBD</button>
+          </div>
+        </div>
+
+        <div class="control-row">
+          <div class="view-toggle" role="group" aria-label="Switch schedule view mode">
+            <button class="chip is-active" type="button" data-view="cards" aria-pressed="true">Card View</button>
+            <button class="chip" type="button" data-view="table" aria-pressed="false">Table View</button>
+          </div>
+
+          <button id="my-plan-toggle" class="chip" type="button" aria-pressed="false">My Plan</button>
+
+          <button id="print-plan-button" class="button-primary" type="button">Print My Plan</button>
+        </div>
+      </section>
+
+      <section id="schedule-root" class="schedule" aria-labelledby="schedule-heading">
+        <div class="schedule__head">
+          <h2 id="schedule-heading">Event Schedule</h2>
+          <p id="schedule-status" class="schedule-status" aria-live="polite"></p>
+        </div>
+
+        <div id="cards-view" class="view-panel" role="region" aria-label="Card view schedule"></div>
+        <div id="table-view" class="view-panel" role="region" aria-label="Table view schedule" hidden></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Sam Houston State University | AI Week 2026</p>
+    </footer>
+
+    <script src="events.js"></script>
+    <script src="schedule.js"></script>
+  </body>
+</html>
