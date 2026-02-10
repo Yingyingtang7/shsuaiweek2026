@@ -136,20 +136,6 @@ const events = [
 
   // Thursday, March 26
   {
-    id: "thu-licensed-copilot",
-    day: "Thursday",
-    date: "2026-03-26",
-    title: "Licensed MS Copilot Training",
-    startTime: "9:00 am",
-    endTime: "10:30 am",
-    location: "Teams",
-    modality: "Online",
-    modOrTrainer: "Trainer: Britney Norris (IT)",
-    notes: "",
-    link: null,
-    tags: ["Training", "Tools"]
-  },
-  {
     id: "thu-prompt-workshop",
     day: "Thursday",
     date: "2026-03-26",
@@ -190,9 +176,23 @@ const events = [
     notes: "Time will be either 2:00 pm or 3:00 pm.",
     link: null,
     tags: ["Panel", "Academic affairs"]
-  }
+  },
 
-  // Friday, March 27: no events listed
+  // Friday, March 27
+  {
+    id: "thu-licensed-copilot",
+    day: "Friday",
+    date: "2026-03-27",
+    title: "Licensed MS Copilot Training",
+    startTime: "9:00 am",
+    endTime: "10:30 am",
+    location: "Teams",
+    modality: "Online",
+    modOrTrainer: "Trainer: Britney Norris (IT)",
+    notes: "",
+    link: null,
+    tags: ["Training", "Tools"]
+  }
 ];
 
 // If Codex uses ES modules, it can change this to `export default events;`
