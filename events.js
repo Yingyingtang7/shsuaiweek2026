@@ -107,6 +107,8 @@ const events = [
     modOrTrainer: "Michael Henderson",
     notes: "",
     link: null,
+    flyerLink: "Artsflyer.pdf",
+    flyerLabel: "View flyer",
     tags: ["Roundtable", "Arts & Media", "Creative"]
   },
   {
@@ -153,6 +155,8 @@ const events = [
     modOrTrainer: "Moderator Dr. Ashley L. Brittain, SHSU AI Faculty Fellow, Assistant Professor-School of Teaching and Learning",
     notes: "",
     link: "https://shsu.zoom.us/j/5345325402",
+    flyerLink: "Ashleyflyer.pdf",
+    flyerLabel: "View flyer",
     tags: ["Workshop", "Faculty", "Prompting"]
   },
   {
@@ -214,7 +218,3 @@ const events = [
     notes: "",
     link: null,
     tags: ["Training", "Tools"]
-  }
-];
-
-// If Codex uses ES modules, it can change this to `export default events;`
