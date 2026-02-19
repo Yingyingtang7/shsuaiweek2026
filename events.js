@@ -40,7 +40,9 @@ const events = [
     endTime: "3:00 pm",
     location: "LDB 339 (36 seats), FTF",
     modality: "In person",
-    modOrTrainer: "Yingying",
+    description: "An overview of developing an AI writing course and insights from students’ effective practices and common challenges.",
+    modOrTrainerLabel: "Moderator",
+    modOrTrainer: "Yingying Tang, SHSU AI Faculty Fellow, Assistant Professor of Technical Communication",
     notes: "",
     link: null,
     tags: ["Teaching", "Faculty focus"]
@@ -56,7 +58,8 @@ const events = [
     endTime: "11:00 am",
     location: "Teams",
     modality: "Online",
-    modOrTrainer: "Trainer: Britney Norris (IT)",
+    modOrTrainerLabel: "Trainer",
+    modOrTrainer: "Britney Norris (IT)",
     notes: "",
     link: null,
     tags: ["Training", "Tools"]
@@ -93,17 +96,18 @@ const events = [
   // Wednesday, March 25
   {
     id: "wed-promises-threats",
-    day: "Wednesday",
-    date: "2026-03-25",
-    title: "The Promises and Threats of Artificial Intelligence to Creative Practices",
-    startTime: null,
-    endTime: null,
-    location: "",
+    day: "Thursday",
+    date: "2026-03-26",
+    title: "Promises and Threats: Artificial Intelligence in Arts & Media",
+    startTime: "10:30 am",
+    endTime: "12:00 noon",
+    location: "GPAC 170",
     modality: "In person",
+    description: "Roundtable with faculty discussing their use of AI in creative practices.",
     modOrTrainer: "Michael Henderson",
     notes: "",
     link: null,
-    tags: ["Talk", "Creative"]
+    tags: ["Roundtable", "Arts & Media", "Creative"]
   },
   {
     id: "wed-copilot-chat",
@@ -114,7 +118,8 @@ const events = [
     endTime: "10:30 am",
     location: "Virtual",
     modality: "Online",
-    modOrTrainer: "Trainer: Britney Norris (IT)",
+    modOrTrainerLabel: "Trainer",
+    modOrTrainer: "Britney Norris (IT)",
     notes: "",
     link: null,
     tags: ["Training", "Tools"]
@@ -139,15 +144,16 @@ const events = [
     id: "thu-prompt-workshop",
     day: "Thursday",
     date: "2026-03-26",
-    title: "Workshop on Prompting",
+    title: "Prompting for Precision: Designing Effective AI Queries in Higher Education",
     startTime: "10:00 am",
     endTime: "11:00 am",
-    location: "Teams",
+    location: "Zoom",
     modality: "Online",
-    modOrTrainer: "Ashley",
+    description: "Learn how to write effective AI prompts to support teaching, research, and faculty workflows. This session provides practical strategies and ready-to-use examples you can apply immediately.",
+    modOrTrainer: "Moderator Dr. Ashley L. Brittain, SHSU AI Faculty Fellow, Assistant Professor-School of Teaching and Learning",
     notes: "",
-    link: null,
-    tags: ["Workshop"]
+    link: "https://shsu.zoom.us/j/5345325402",
+    tags: ["Workshop", "Faculty", "Prompting"]
   },
   {
     id: "thu-middle-ground",
@@ -164,18 +170,34 @@ const events = [
     tags: ["Panel", "Students", "Faculty"]
   },
   {
-    id: "thu-academic-affairs-panel",
+    id: "thu-blackboard-design-assistant",
     day: "Thursday",
     date: "2026-03-26",
-    title: "Academic Affairs AI Panel",
-    startTime: "TBD",
+    title: "AI Design Assistant for Blackboard Webinar",
+    startTime: "1:00 pm",
     endTime: null,
-    location: "",
-    modality: "In person",
-    modOrTrainer: "Shani",
-    notes: "Time will be either 2:00 pm or 3:00 pm.",
-    link: null,
-    tags: ["Panel", "Academic affairs"]
+    location: "Online",
+    modality: "Online",
+    modOrTrainer: "SHSU Online Instructional Development and Support",
+    notes: "",
+    linkLabel: "Register Here",
+    link: "https://wkf.ms/4rP6d1Z",
+    tags: ["Webinar", "Blackboard", "Faculty support"]
+  },
+  {
+    id: "thu-academic-affairs-panel",
+    day: "Tuesday",
+    date: "2026-03-24",
+    title: "Academic Integrity in the Age of AI Webinar",
+    startTime: "12:00 pm",
+    endTime: null,
+    location: "Online",
+    modality: "Online",
+    modOrTrainer: "SHSU Online Instructional Development and Support",
+    notes: "",
+    linkLabel: "Register Here",
+    link: "https://wkf.ms/4rP6d1Z",
+    tags: ["Webinar", "Academic integrity", "Faculty support"]
   },
 
   // Friday, March 27
