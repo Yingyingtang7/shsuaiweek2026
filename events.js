@@ -218,3 +218,7 @@ const events = [
     notes: "",
     link: null,
     tags: ["Training", "Tools"]
+  }
+];
+
+// If Codex uses ES modules, it can change this to `export default events;`
