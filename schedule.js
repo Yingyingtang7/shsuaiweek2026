@@ -219,6 +219,8 @@
       appendDetail(detailsInner, "Tags", event.tags.join(" | "));
     }
 
+    const actionLinks = [];
+
     if (event.link) {
       const joinLink = document.createElement("a");
       joinLink.className = "join-btn";
@@ -226,7 +228,24 @@
       joinLink.target = "_blank";
       joinLink.rel = "noopener noreferrer";
       joinLink.textContent = buildJoinLabel(event);
-      detailsInner.appendChild(joinLink);
+      actionLinks.push(joinLink);
+    }
+
+    if (event.flyerLink) {
+      const flyerLink = document.createElement("a");
+      flyerLink.className = "join-btn";
+      flyerLink.href = event.flyerLink;
+      flyerLink.target = "_blank";
+      flyerLink.rel = "noopener noreferrer";
+      flyerLink.textContent = event.flyerLabel || "View flyer";
+      actionLinks.push(flyerLink);
+    }
+
+    if (actionLinks.length > 0) {
+      const actions = document.createElement("div");
+      actions.className = "event-actions";
+      actionLinks.forEach((linkNode) => actions.appendChild(linkNode));
+      detailsInner.appendChild(actions);
     }
 
     if (!detailsInner.childNodes.length) {
