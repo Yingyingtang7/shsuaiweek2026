@@ -288,10 +288,6 @@ body::after {
   transform: translateY(-2px);
 }
 
-.event-card.is-expanded {
-  border-color: rgba(245, 100, 35, 0.45);
-}
-
 .event-card__header {
   display: flex;
   align-items: flex-start;
@@ -299,11 +295,7 @@ body::after {
 }
 
 .event-summary {
-  appearance: none;
-  border: 0;
-  background: transparent;
   text-align: left;
-  cursor: pointer;
   padding: 0;
   color: inherit;
   width: 100%;
@@ -352,20 +344,13 @@ body::after {
 }
 
 .event-details {
-  display: grid;
-  grid-template-rows: 0fr;
-  opacity: 0;
-  transition: grid-template-rows 0.26s ease, opacity 0.22s ease;
-}
-
-.event-card.is-expanded .event-details {
-  grid-template-rows: 1fr;
+  display: block;
   opacity: 1;
 }
 
 .event-details__inner {
-  min-height: 0;
-  overflow: hidden;
+  min-height: auto;
+  overflow: visible;
   display: grid;
   gap: var(--space-2);
   border-top: 1px solid var(--color-border);
@@ -573,11 +558,6 @@ a:focus-visible {
     border: 1px solid #d6d6d6;
     border-radius: 10px;
     padding: 0.12in;
-  }
-
-  .event-card:not(.is-expanded) .event-details {
-    grid-template-rows: 1fr;
-    opacity: 1;
   }
 
   .favorite-btn {
