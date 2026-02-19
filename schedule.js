@@ -19,8 +19,7 @@
     dayFilter: "all",
     viewMode: "cards",
     myPlanOnly: false,
-    favorites: loadFavorites(),
-    expanded: new Set()
+    favorites: loadFavorites()
   };
 
   const elements = {
@@ -161,7 +160,6 @@
 
   function createEventCard(event) {
     const isFavorite = state.favorites.has(event.id);
-    const isExpanded = state.expanded.has(event.id);
 
     const card = document.createElement("article");
     card.className = "event-card";
@@ -171,19 +169,13 @@
       card.classList.add("is-favorite");
     }
 
-    if (isExpanded) {
-      card.classList.add("is-expanded");
-    }
-
     addHoverFocusStates(card);
 
     const header = document.createElement("div");
     header.className = "event-card__header";
 
-    const summaryButton = document.createElement("button");
-    summaryButton.type = "button";
-    summaryButton.className = "event-summary";
-    summaryButton.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+    const summary = document.createElement("div");
+    summary.className = "event-summary";
 
     const title = document.createElement("span");
     title.className = "event-title";
@@ -193,22 +185,7 @@
     meta.className = "event-meta";
     meta.textContent = formatCardMeta(event);
 
-    summaryButton.append(title, meta);
-
-    const detailsId = `event-details-${sanitizeId(event.id || event.title || "event")}`;
-    summaryButton.setAttribute("aria-controls", detailsId);
-
-    summaryButton.addEventListener("click", () => {
-      const next = !state.expanded.has(event.id);
-      if (next) {
-        state.expanded.add(event.id);
-      } else {
-        state.expanded.delete(event.id);
-      }
-
-      card.classList.toggle("is-expanded", next);
-      summaryButton.setAttribute("aria-expanded", next ? "true" : "false");
-    });
+    summary.append(title, meta);
 
     const favoriteButton = document.createElement("button");
     favoriteButton.type = "button";
@@ -226,17 +203,16 @@
       toggleFavorite(event.id);
     });
 
-    header.append(summaryButton, favoriteButton);
+    header.append(summary, favoriteButton);
 
     const details = document.createElement("div");
     details.className = "event-details";
-    details.id = detailsId;
 
     const detailsInner = document.createElement("div");
     detailsInner.className = "event-details__inner";
 
     appendDetail(detailsInner, "Description", event.description);
-    appendDetail(detailsInner, "Moderator/Trainer", event.modOrTrainer);
+    appendDetail(detailsInner, event.modOrTrainerLabel || "Moderator/Trainer", event.modOrTrainer);
     appendDetail(detailsInner, "Notes", event.notes);
 
     if (Array.isArray(event.tags) && event.tags.length > 0) {
@@ -402,7 +378,6 @@
 
     if (state.favorites.has(eventId)) {
       state.favorites.delete(eventId);
-      state.expanded.delete(eventId);
     } else {
       state.favorites.add(eventId);
     }
@@ -661,6 +636,10 @@
   }
 
   function buildJoinLabel(event) {
+    if (event.linkLabel && String(event.linkLabel).trim()) {
+      return String(event.linkLabel).trim();
+    }
+
     const context = `${event.location || ""} ${event.link || ""} ${event.modality || ""}`.toLowerCase();
 
     if (context.includes("zoom")) {
@@ -674,10 +653,4 @@
     return "Open Link";
   }
 
-  function sanitizeId(text) {
-    return String(text || "event")
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/(^-|-$)/g, "");
-  }
 })();
