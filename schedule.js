@@ -3,11 +3,11 @@
 
   const FAVORITES_STORAGE_KEY = "ai-week-2026-favorites";
   const DAY_META = [
-    { value: "monday", label: "Monday" },
-    { value: "tuesday", label: "Tuesday" },
-    { value: "wednesday", label: "Wednesday" },
-    { value: "thursday", label: "Thursday" },
-    { value: "friday", label: "Friday" }
+    { value: "monday", label: "Monday, March 23, 2026" },
+    { value: "tuesday", label: "Tuesday, March 24, 2026" },
+    { value: "wednesday", label: "Wednesday, March 25, 2026" },
+    { value: "thursday", label: "Thursday, March 26, 2026" },
+    { value: "friday", label: "Friday, March 27, 2026" }
   ];
 
   if (typeof events === "undefined" || !Array.isArray(events)) {
