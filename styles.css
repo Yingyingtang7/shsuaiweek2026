@@ -366,6 +366,34 @@ body::after {
   font-weight: 700;
 }
 
+.detail-tags {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.event-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.22rem 0.6rem;
+  border-radius: var(--radius-pill);
+  background: #f5f5f5;
+  color: var(--color-text);
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.event-tag--in-person {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
 .event-actions {
   display: flex;
   flex-wrap: wrap;
