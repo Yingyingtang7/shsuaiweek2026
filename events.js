@@ -179,8 +179,8 @@ const events = [
   },
   {
     id: "thu-skeptics-panel",
-    day: "Thursday",
-    date: "2026-03-26",
+    day: "Wednesday",
+    date: "2026-03-25",
     title: "Skeptics Panel",
     startTime: "11:30 am",
     endTime: "1:00 pm",
