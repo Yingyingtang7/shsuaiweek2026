@@ -8,12 +8,13 @@ const events = [
     day: "Monday",
     date: "2026-03-23",
     title: "Local and Personal Language Models",
-    startTime: null,
+    startTime: "On-demand",
     endTime: null,
-    location: "Gen AI site",
+    location: "Gen AI site | Online",
     modality: "Pre-recorded",
-    modOrTrainer: "Syed",
-    notes: "Pre-recorded and posted to the Gen AI site.",
+    modOrTrainerLabel: "Trainer",
+    modOrTrainer: "Syed Hasib AKhter Faruqui; SHSU TLC AI Faculty Fellow, Assistant Professor of Department of Engineering Technology",
+    notes: "Pre-recorded and posted to the GenAI site.",
     link: null,
     tags: ["Workshop", "Asynchronous"]
   },
@@ -38,14 +39,14 @@ const events = [
     title: "Developing and Teaching an AI Writing Course",
     startTime: "2:00 pm",
     endTime: "3:00 pm",
-    location: "LDB 339 (36 seats), FTF",
+    location: "LDB 339",
     modality: "In person",
     description: "An overview of developing an AI writing course and insights from students’ effective practices and common challenges.",
     modOrTrainerLabel: "Moderator",
     modOrTrainer: "Yingying Tang, SHSU AI Faculty Fellow, Assistant Professor of Technical Communication",
     notes: "",
     link: null,
-    tags: ["Teaching", "Faculty focus"]
+    tags: ["Teaching", "Faculty focus", "In person"]
   },
 
   // Tuesday, March 24
@@ -104,12 +105,13 @@ const events = [
     location: "GPAC 170",
     modality: "In person",
     description: "Roundtable with faculty discussing their use of AI in creative practices.",
+    modOrTrainerLabel: "Trainer",
     modOrTrainer: "Michael Henderson",
     notes: "",
     link: null,
     flyerLink: "Artsflyer.pdf",
     flyerLabel: "View flyer",
-    tags: ["Roundtable", "Arts & Media", "Creative"]
+    tags: ["Roundtable", "Arts & Media", "Creative", "In person"]
   },
   {
     id: "wed-copilot-chat",
@@ -138,7 +140,7 @@ const events = [
     modOrTrainer: "",
     notes: "No registration needed.",
     link: null,
-    tags: ["Library", "Evening event"]
+    tags: ["Library", "Evening event", "In person"]
   },
 
   // Thursday, March 26
@@ -152,7 +154,8 @@ const events = [
     location: "Zoom",
     modality: "Online",
     description: "Learn how to write effective AI prompts to support teaching, research, and faculty workflows. This session provides practical strategies and ready-to-use examples you can apply immediately.",
-    modOrTrainer: "Moderator Dr. Ashley L. Brittain, SHSU AI Faculty Fellow, Assistant Professor-School of Teaching and Learning",
+    modOrTrainerLabel: "Moderator",
+    modOrTrainer: "Dr. Ashley L. Brittain, SHSU AI Faculty Fellow, Assistant Professor-School of Teaching and Learning",
     notes: "",
     link: "https://shsu.zoom.us/j/5345325402",
     flyerLink: "Ashleyflyer.pdf",
@@ -166,12 +169,28 @@ const events = [
     title: "Middle Ground: Bearkats Talk AI",
     startTime: "11:00 am",
     endTime: "1:00 pm",
-    location: "LSC 230A&B or 241A&B",
+    location: "LSC Room 241",
     modality: "In person",
-    modOrTrainer: "",
-    notes: "Students and a faculty panel (Syed, Bina, Yingying).",
+    modOrTrainerLabel: "Panelist",
+    modOrTrainer: "Syed Hasib AKhter Faruqui, Bina Ajay, Yingying Tang",
+    notes: "",
     link: null,
-    tags: ["Panel", "Students", "Faculty"]
+    tags: ["Panel", "Students", "Faculty", "In person"]
+  },
+  {
+    id: "thu-skeptics-panel",
+    day: "Thursday",
+    date: "2026-03-26",
+    title: "Skeptics Panel",
+    startTime: "11:30 am",
+    endTime: "1:00 pm",
+    location: "NGL 402",
+    modality: "In person",
+    modOrTrainerLabel: "Moderator",
+    modOrTrainer: "Erin Owens",
+    notes: "Panelists: Benjamin Mitchell-Yellin, Syed Faruqui, Ren Oliver, and Jay Neupane",
+    link: null,
+    tags: ["Panel", "In person"]
   },
   {
     id: "thu-blackboard-design-assistant",
@@ -189,6 +208,23 @@ const events = [
     tags: ["Webinar", "Blackboard", "Faculty support"]
   },
   {
+    id: "thu-coba-academic-affairs-panel",
+    day: "Thursday",
+    date: "2026-03-26",
+    title: "COBA Sponsored Academic Affairs AI Panel",
+    startTime: "3:00 pm",
+    endTime: "4:30 pm",
+    location: "LSC 323",
+    modality: "In person",
+    modOrTrainerLabel: "Moderator",
+    modOrTrainer: "Dr. Shani Robinson",
+    notes: "",
+    flyerLink: "COBA Sponsored Academic Affairs AI Panel Flyer.pdf",
+    flyerLabel: "View Flyer",
+    link: null,
+    tags: ["Panel", "Academic affairs", "In person"]
+  },
+  {
     id: "thu-academic-affairs-panel",
     day: "Tuesday",
     date: "2026-03-24",
@@ -197,6 +233,7 @@ const events = [
     endTime: null,
     location: "Online",
     modality: "Online",
+    modOrTrainerLabel: "Moderator",
     modOrTrainer: "SHSU Online Instructional Development and Support",
     notes: "",
     linkLabel: "Register Here",
@@ -214,7 +251,8 @@ const events = [
     endTime: "10:30 am",
     location: "Teams",
     modality: "Online",
-    modOrTrainer: "Trainer: Britney Norris (IT)",
+    modOrTrainerLabel: "Trainer",
+    modOrTrainer: "Britney Norris (IT)",
     notes: "",
     link: null,
     tags: ["Training", "Tools"]
