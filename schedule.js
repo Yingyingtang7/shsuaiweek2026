@@ -216,7 +216,7 @@
     appendDetail(detailsInner, "Notes", event.notes);
 
     if (Array.isArray(event.tags) && event.tags.length > 0) {
-      appendDetail(detailsInner, "Tags", event.tags.join(" | "));
+      appendTags(detailsInner, event.tags);
     }
 
     const actionLinks = [];
@@ -326,7 +326,7 @@
       titleCell.textContent = event.title || "Untitled Event";
 
       const locationCell = document.createElement("td");
-      locationCell.textContent = event.location || "TBD";
+      locationCell.textContent = formatDisplayLocation(event);
 
       const modCell = document.createElement("td");
       modCell.textContent = event.modOrTrainer || "-";
@@ -510,6 +510,41 @@
     container.appendChild(line);
   }
 
+  function appendTags(container, tags) {
+    const cleanTags = tags
+      .map((tag) => String(tag || "").trim())
+      .filter(Boolean);
+
+    if (!cleanTags.length) {
+      return;
+    }
+
+    const line = document.createElement("p");
+    line.className = "detail-item detail-tags";
+
+    const strong = document.createElement("strong");
+    strong.textContent = "Tags: ";
+    line.appendChild(strong);
+
+    const tagWrap = document.createElement("span");
+    tagWrap.className = "tag-list";
+
+    cleanTags.forEach((tag) => {
+      const tagEl = document.createElement("span");
+      tagEl.className = "event-tag";
+      tagEl.textContent = tag;
+
+      if (tag.toLowerCase() === "in person") {
+        tagEl.classList.add("event-tag--in-person");
+      }
+
+      tagWrap.appendChild(tagEl);
+    });
+
+    line.appendChild(tagWrap);
+    container.appendChild(line);
+  }
+
   function createEmptyState(message) {
     const empty = document.createElement("div");
     empty.className = "empty-state";
@@ -616,8 +651,26 @@
   }
 
   function formatCardMeta(event) {
-    const parts = [formatTimeRange(event), event.location || "Location TBD"];
+    const parts = [formatTimeRange(event), formatDisplayLocation(event)];
     return parts.join(" | ");
+  }
+
+  function formatDisplayLocation(event) {
+    const location = String(event.location || "").trim();
+    const modality = String(event.modality || "").toLowerCase();
+    const normalizedLocation = location.toLowerCase();
+
+    if (
+      normalizedLocation === "zoom" ||
+      normalizedLocation === "teams" ||
+      normalizedLocation === "online" ||
+      normalizedLocation === "virtual" ||
+      modality === "online"
+    ) {
+      return "Online";
+    }
+
+    return location || "Location TBD";
   }
 
   function formatTimeRange(event) {
