@@ -62,8 +62,9 @@ const events = [
     modOrTrainerLabel: "Trainer",
     modOrTrainer: "Britney Norris (IT)",
     notes: "",
-    link: null,
-    tags: ["Training", "Tools"]
+    linkLabel: "Register",
+    link: "https://samhouston.csod.com/samldefault.aspx?ouid=1&returnUrl=%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253dca934c65-f031-4b15-a723-51872fd5bbba",
+    tags: ["Training", "Tools", "Faculty support"]
   },
   {
     id: "tue-ai-research-grad",
@@ -125,8 +126,9 @@ const events = [
     modOrTrainerLabel: "Trainer",
     modOrTrainer: "Britney Norris (IT)",
     notes: "",
-    link: null,
-    tags: ["Training", "Tools"]
+    linkLabel: "Register",
+    link: "https://samhouston.csod.com/samldefault.aspx?ouid=1&returnUrl=%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253de14f2f92-4ed0-41c3-b450-db6365da4f28",
+    tags: ["Training", "Tools", "Faculty support"]
   },
   {
     id: "wed-create-or-generate",
@@ -182,8 +184,8 @@ const events = [
     day: "Wednesday",
     date: "2026-03-25",
     title: "Skeptics Panel",
-    startTime: "11:30 am",
-    endTime: "1:00 pm",
+    startTime: "12:00 pm",
+    endTime: "1:30 pm",
     location: "NGL 402",
     modality: "In person",
     modOrTrainerLabel: "Moderator",
@@ -203,7 +205,7 @@ const events = [
     modality: "Online",
     modOrTrainer: "SHSU Online Instructional Development and Support",
     notes: "",
-    linkLabel: "Register Here",
+    linkLabel: "Register",
     link: "https://wkf.ms/4rP6d1Z",
     tags: ["Webinar", "Blackboard", "Faculty support"]
   },
@@ -236,7 +238,7 @@ const events = [
     modOrTrainerLabel: "Moderator",
     modOrTrainer: "SHSU Online Instructional Development and Support",
     notes: "",
-    linkLabel: "Register Here",
+    linkLabel: "Register",
     link: "https://wkf.ms/4rP6d1Z",
     tags: ["Webinar", "Academic integrity", "Faculty support"]
   },
@@ -254,8 +256,9 @@ const events = [
     modOrTrainerLabel: "Trainer",
     modOrTrainer: "Britney Norris (IT)",
     notes: "",
-    link: null,
-    tags: ["Training", "Tools"]
+    linkLabel: "Register",
+    link: "https://samhouston.csod.com/samldefault.aspx?ouid=1&returnUrl=%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253d55a0d32d-71a5-4209-a4f8-f34fadb2eb55",
+    tags: ["Training", "Tools", "Faculty support"]
   }
 ];
 
