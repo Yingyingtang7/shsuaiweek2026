@@ -308,6 +308,30 @@ body::after {
   font-weight: 700;
 }
 
+.event-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.event-title-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.16rem 0.5rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: 0.74rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.event-title-tag--table {
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}
+
 .event-meta {
   margin: var(--space-1) 0 0;
   color: var(--color-muted);
