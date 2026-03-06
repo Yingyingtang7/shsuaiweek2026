@@ -180,12 +180,22 @@
     const title = document.createElement("span");
     title.className = "event-title";
     title.textContent = event.title || "Untitled Event";
+    const titleRow = document.createElement("div");
+    titleRow.className = "event-title-row";
+    titleRow.appendChild(title);
+
+    if (event.titleTag) {
+      const titleTag = document.createElement("span");
+      titleTag.className = "event-title-tag";
+      titleTag.textContent = event.titleTag;
+      titleRow.appendChild(titleTag);
+    }
 
     const meta = document.createElement("p");
     meta.className = "event-meta";
     meta.textContent = formatCardMeta(event);
 
-    summary.append(title, meta);
+    summary.append(titleRow, meta);
 
     const favoriteButton = document.createElement("button");
     favoriteButton.type = "button";
@@ -323,7 +333,16 @@
       timeCell.textContent = formatTimeRange(event);
 
       const titleCell = document.createElement("td");
-      titleCell.textContent = event.title || "Untitled Event";
+      const tableTitle = document.createElement("span");
+      tableTitle.textContent = event.title || "Untitled Event";
+      titleCell.appendChild(tableTitle);
+
+      if (event.titleTag) {
+        const tableTitleTag = document.createElement("span");
+        tableTitleTag.className = "event-title-tag event-title-tag--table";
+        tableTitleTag.textContent = event.titleTag;
+        titleCell.appendChild(tableTitleTag);
+      }
 
       const locationCell = document.createElement("td");
       locationCell.textContent = formatDisplayLocation(event);
