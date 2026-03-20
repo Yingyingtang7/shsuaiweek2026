@@ -243,7 +243,7 @@ const events = [
     modOrTrainerLabel: "Moderator",
     modOrTrainer: "Dr. Shani Robinson",
     notes: "",
-    flyerLink: "COBA Sponsored Academic Affairs AI Panel Flyer.pdf",
+    flyerLink: "coba new.png",
     flyerLabel: "View Flyer",
     link: null,
     tags: ["Panel", "Academic affairs", "In person"]
