@@ -15,7 +15,8 @@ const events = [
     modOrTrainerLabel: "Trainer",
     modOrTrainer: "Syed Hasib AKhter Faruqui; SHSU TLC AI Faculty Fellow, Assistant Professor of Department of Engineering Technology",
     notes: "Pre-recorded and posted to the GenAI site.",
-    link: null,
+    linkLabel: "View Online",
+    link: "https://www.youtube.com/watch?v=z_OFPo4zXi4",
     tags: ["Workshop", "Asynchronous"]
   },
   {
