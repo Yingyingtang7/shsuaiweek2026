@@ -181,10 +181,11 @@ const events = [
     description: "Learn how to write effective AI prompts to support teaching, research, and faculty workflows. This session provides practical strategies and ready-to-use examples you can apply immediately.",
     modOrTrainerLabel: "Moderator",
     modOrTrainer: "Dr. Ashley L. Brittain, SHSU AI Faculty Fellow, Assistant Professor-School of Teaching and Learning",
-    notes: "",
-    link: "https://shsu.zoom.us/j/5345325402",
-    flyerLink: "Ashleyflyer.pdf",
-    flyerLabel: "View flyer",
+    notes: "Recording passcode: eBU^4^3L",
+    linkLabel: "View Recording",
+    link: "https://shsu.zoom.us/rec/share/QYHXe0vqLLqBo9YQhkzWPAxGcwe597QW5U_GAxtz2q-Snhlpn4WO6SsZSgLOsgxF.NhJxMlXcg0hkv-FW?startTime=1774537667000",
+    flyerLink: "Prompting for Precision.pptx",
+    flyerLabel: "View Slides",
     tags: ["Workshop", "Faculty", "Prompting"]
   },
   {
